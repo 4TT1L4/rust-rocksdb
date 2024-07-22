@@ -23,8 +23,8 @@ use std::{
     sync::{Arc, Mutex},
 };
 
-use std::ffi::CStr;
 use crate::CStrLike;
+use std::ffi::CStr;
 
 use crate::{
     column_family::UnboundColumnFamily,
@@ -1074,7 +1074,6 @@ impl TransactionDB<MultiThreaded> {
         )
     }
 }
-
 
 impl<T: ThreadMode> Drop for TransactionDB<T> {
     fn drop(&mut self) {
